@@ -13,13 +13,77 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.gform_button {
+	.btn;
+	.btn-primary;
+}
 
 
 /* ==========================================================================
    Header
    ========================================================================== */
 
-.banner { }
+.banner {
+	background: #034ea2 url(../img/blue-pattern-bg.jpg) repeat 0 0;
+}
+
+.home-header {
+	padding-top: @line-height-computed * 2;
+	padding-bottom: @line-height-computed * 3;
+}
+
+.home-header .title {
+	color: #fff;
+	.bride-name,
+	.groom-name {
+		font-weight: 500;
+	}
+	.and {
+		.h2;
+		line-height: @line-height-computed * 0;
+		font-style: italic;
+		font-weight: 300;
+		margin-right: .25em;
+		color: @brand-primary-light;
+	}
+}
+
+.home-header .subtitle {
+	color: @brand-primary-light;
+	display: block;
+	font-size: @font-size-base;
+	letter-spacing: 2px;
+	font-weight: 600;
+	font-variant: small-caps;
+	line-height: @line-height-computed * 3;
+	margin-left: 3em;
+}
+
+.home-header .datetime {
+	.h4;
+	color: #fff;
+	font-weight: 600;
+}
+
+.home-header .location {
+	.h4;
+	color: #fff;
+}
+
+.home-header {
+	overflow: hidden;
+}
+.home-header .container {
+	position: relative;
+}
+.home-header .container:after {
+	content: url(../img/fox.png);
+	position: absolute;
+	top: @line-height-computed * 4;
+	right: @grid-gutter-width * 2;
+}
+
+
 
 
 
@@ -36,6 +100,11 @@ body {
    ========================================================================== */
 
 .main { }
+
+.main section {
+	padding-top: @line-height-computed * 2;
+	padding-bottom: @line-height-computed * 2;
+}
 
 /* Gallery Shortcode */
 .gallery-row { padding: 15px 0; }
@@ -66,7 +135,12 @@ body {
    Footer
    ========================================================================== */
 
-.content-info { }
+.content-info {
+	background: #034ea2 url(../img/blue-pattern-bg.jpg) repeat 0 0;
+	padding-top: @line-height-computed * 2;
+	padding-bottom: @line-height-computed * 2;
+	color: @brand-primary-light;
+}
 
 
 
@@ -86,8 +160,20 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Media Queries
    ========================================================================== */
 
-@media (min-width: @screen-sm-min) { }
+@media (min-width: @screen-sm-min) {
+}
 
-@media (min-width: @screen-md-min) { }
+@media (min-width: @screen-md-min) {
+}
 
-@media (min-width: @screen-lg-min) { }
+@media (min-width: @screen-lg-min) {
+}
+
+@media (min-width: @screen-sm-min) {
+}
+
+@media (min-width: @screen-md-min) {
+}
+
+@media (min-width: @screen-lg-min) {
+}

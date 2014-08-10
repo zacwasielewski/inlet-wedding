@@ -18,6 +18,11 @@ define('POST_EXCERPT_LENGTH', 40); // Length in words for excerpt_length filter 
  * .main classes
  */
 function roots_main_class() {
+	
+	if (is_front_page()) {
+		return '';
+	}
+	
   if (roots_display_sidebar()) {
     // Classes on pages with the sidebar
     $class = 'col-sm-8';

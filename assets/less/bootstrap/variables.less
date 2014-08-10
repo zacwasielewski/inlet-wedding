@@ -7,27 +7,29 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-@gray-darker:            lighten(#000, 13.5%); // #222
-@gray-dark:              lighten(#000, 20%);   // #333
-@gray:                   lighten(#000, 33.5%); // #555
-@gray-light:             lighten(#000, 60%);   // #999
-@gray-lighter:           lighten(#000, 93.5%); // #eee
+@gray-darker:            mix(#00212a, #fff6e1, 13.5%); // #222
+@gray-dark:              mix(#00212a, #fff6e1, 20%);   // #333
+@gray:                   mix(#00212a, #fff6e1, 33.5%); // #555
+@gray-light:             mix(#00212a, #fff6e1, 60%);   // #999
+@gray-lighter:           mix(#00212a, #fff6e1, 93.5%); // #eee
 
-@brand-primary:         #428bca;
+@brand-primary:         #034ea2;
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
 
+@brand-primary-light:		#3a7cc6;
+@brand-primary-dark: 		#03448d;
 
 //== Scaffolding
 //
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #fff;
+@body-bg:               #fff; //#00212a;
 //** Global text color on `<body>`.
-@text-color:            @gray-dark;
+@text-color:            #444;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
@@ -39,22 +41,24 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "adelle-sans", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  "freight-sans-pro", Helvetica, Arial, sans-serif;
 @font-family-serif:       "dapifer", "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          14px;
-@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
-@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+//http://type-scale.com/?size=16&scale=1.414&text=A%20Visual%20Type%20Scale&webfont=Georgia&font-family=Georgia&font-weight=600&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=%23333
 
-@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
-@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
-@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
-@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-base:          16px;
+@font-size-large:         ceil(@font-size-base * 1.5);
+@font-size-small:         ceil(@font-size-base * 0.667);
+
+@font-size-h1:            ceil(@font-size-base * 5.063);
+@font-size-h2:            ceil(@font-size-base * 3.375);
+@font-size-h3:            ceil(@font-size-base * 2.25);
+@font-size-h4:            ceil(@font-size-base * 1.5);
 @font-size-h5:            @font-size-base;
-@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+@font-size-h6:            @font-size-base;
 
 //** Unit-less `line-height` for use in components like buttons.
 @line-height-base:        1.428571429; // 20/14
@@ -62,10 +66,10 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family:    inherit;
-@headings-font-weight:    500;
+@headings-font-family:    @font-family-serif;
+@headings-font-weight:    300;
 @headings-line-height:    1.1;
-@headings-color:          inherit;
+@headings-color:          @brand-primary-dark;
 
 
 //-- Iconography
