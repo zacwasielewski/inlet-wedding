@@ -5,7 +5,7 @@
 	"source": {
 		"type": "git",
 		"url": "git@github.com:zacwasielewski/inlet-wedding.git",
-		"reference": "v0.1.1",
+		"reference": "v0.1.2",
 		"require": {
 			"composer/installers": "~1.0"
 		}
