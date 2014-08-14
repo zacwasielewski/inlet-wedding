@@ -77,9 +77,11 @@ h1 {
 .home-header {
 	overflow: hidden;
 }
+
 .home-header .container {
 	position: relative;
 }
+
 .home-header .container:after {
 	content: url(../img/fox.png);
 	position: absolute;
@@ -178,7 +180,7 @@ h1 {
 }
 
 #directions {
-	background: #eee url(../img/directions-bg.jpg) no-repeat 0 50%;
+	background: #eee url(../img/directions-bg.jpg) repeat-y 50% 0;
 }
 
 #directions,
@@ -207,20 +209,33 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    Media Queries
    ========================================================================== */
 
-@media (min-width: @screen-sm-min) {
+@media (max-width: @screen-sm-min) {
+
+	.home-header {
+		text-align: center;
+	}
+	
+	.home-header .subtitle {
+		margin-left: 0;
+	}
+	
+	.home-header .container:after {
+		content: url(../img/fox.png);
+		position: static;
+		display: block;
+		margin-top: @line-height-computed * 2;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	h1 { font-size: @font-size-h1 / 2; }
+	h2 { font-size: @font-size-h2 / 2; }
+	h3 { font-size: @font-size-h3 / 2; }
+
 }
 
-@media (min-width: @screen-md-min) {
+@media (max-width: @screen-md-min) {
 }
 
-@media (min-width: @screen-lg-min) {
-}
-
-@media (min-width: @screen-sm-min) {
-}
-
-@media (min-width: @screen-md-min) {
-}
-
-@media (min-width: @screen-lg-min) {
+@media (max-width: @screen-lg-min) {
 }
